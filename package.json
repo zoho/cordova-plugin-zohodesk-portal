@@ -1,0 +1,21 @@
+{
+  "name": "cordova-portal-sdk",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-portal-sdk",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://zdeskgit.csez.zohocorpin.com/zohodesk/cordovo-portal-sdk.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "vignesh.thillai",
+  "license": "ISC"
+}
