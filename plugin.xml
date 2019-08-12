@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-zohodesk-portal" version="0.1.0">
-    <name>CordovaZohoDeskPortalSDK</name>
-    <js-module name="CordovaZohoDeskPortalSDK" src="www/CordovaZohoDeskPortal.js">
+    <name>CordovaZohoDeskPortal</name>
+    <js-module name="CordovaZohoDeskPortal" src="www/CordovaZohoDeskPortal.js">
         <clobbers target="cordova.plugins.CordovaZohoDeskPortal" />
     </js-module>
     <platform name="android">

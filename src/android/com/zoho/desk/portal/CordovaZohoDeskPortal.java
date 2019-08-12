@@ -1,4 +1,4 @@
-package com.zoho.desk.portalsdk;
+package com.zoho.desk.portal;
 
 import android.app.Activity;
 
