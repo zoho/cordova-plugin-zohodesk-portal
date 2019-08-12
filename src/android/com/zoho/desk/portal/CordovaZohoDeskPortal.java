@@ -19,7 +19,7 @@ import org.json.JSONObject;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class CordovaZohoDeskPortalSDK extends CordovaPlugin {
+public class CordovaZohoDeskPortal extends CordovaPlugin {
 
     private ZohoDeskPortalSDK deskPortalSDK;
     private Activity activity;

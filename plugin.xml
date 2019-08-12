@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-portal-sdk" version="0.0.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-zohodesk-portal" version="0.1.0">
     <name>CordovaZohoDeskPortalSDK</name>
     <js-module name="CordovaZohoDeskPortalSDK" src="www/CordovaZohoDeskPortalSDK.js">
-        <clobbers target="cordova.plugins.CordovaZohoDeskPortalSDK" />
+        <clobbers target="cordova.plugins.CordovaZohoDeskPortal" />
     </js-module>
     <platform name="android">
 
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="CordovaZohoDeskPortalSDK">
-                <param name="android-package" value="com.zoho.desk.portalsdk.CordovaZohoDeskPortalSDK" />
+            <feature name="CordovaZohoDeskPortal">
+                <param name="android-package" value="com.zoho.desk.portal.CordovaZohoDeskPortal" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />
-        <source-file src="src/android/com/zoho/desk/portalsdk/CordovaZohoDeskPortalSDK.java" target-dir="src/com/zoho/desk/portalsdk" />
+        <source-file src="src/android/com/zoho/desk/portal/CordovaZohoDeskPortal.java" target-dir="src/com/zoho/desk/portal" />
         <framework custom="true" src="src/android/cordovaZohoPortalSDK.gradle" type="gradleReference" />
     </platform>
 </plugin>

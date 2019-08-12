@@ -1,21 +1,25 @@
 {
-  "name": "cordova-portal-sdk",
-  "version": "0.0.1",
-  "description": "",
+  "name": "cordova-plugin-zohodesk-portal",
+  "version": "0.1.0",
+  "description": "cordova-plugin-zohodesk-portal",
   "cordova": {
-    "id": "cordova-portal-sdk",
+    "id": "cordova-plugin-zohodesk-portal",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://zdeskgit.csez.zohocorpin.com/zohodesk/cordovo-portal-sdk.git"
+    "url": "git+https://github.com/zoho/cordova-plugin-zohodesk-portal.git"
   },
   "keywords": [
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "vignesh.thillai",
-  "license": "ISC"
+  "author": "vignesh.thillai@zohocorp.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoho/cordova-plugin-zohodesk-portal/issues"
+  },
+  "homepage": "https://github.com/zoho/cordova-plugin-zohodesk-portal#readme"
 }
