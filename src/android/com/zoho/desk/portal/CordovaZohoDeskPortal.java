@@ -79,6 +79,8 @@ public class CordovaZohoDeskPortal extends CordovaPlugin {
                 dataCenter = ZohoDeskPortalSDK.DataCenter.EU;
             } else if ("CN".equalsIgnoreCase(dcString)) {
                 dataCenter = ZohoDeskPortalSDK.DataCenter.CN;
+            } else if ("IN".equalsIgnoreCase(dcString)) {
+                dataCenter = ZohoDeskPortalSDK.DataCenter.IN;
             }
             deskPortalSDK.initDesk(orgId, appId, dataCenter, config);
         } catch (Exception e) {
