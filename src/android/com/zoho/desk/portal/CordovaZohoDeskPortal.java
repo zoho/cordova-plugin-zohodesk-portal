@@ -83,6 +83,7 @@ public class CordovaZohoDeskPortal extends CordovaPlugin {
                 dataCenter = ZohoDeskPortalSDK.DataCenter.IN;
             }
             deskPortalSDK.initDesk(orgId, appId, dataCenter, config);
+            callbackContext.success();
         } catch (Exception e) {
             if(callbackContext != null) {
                 callbackContext.error("Error while initialize");
@@ -129,7 +130,7 @@ public class CordovaZohoDeskPortal extends CordovaPlugin {
 
     private void startLiveChat(CallbackContext callbackContext) {
         if(initializeCheck(callbackContext)) {
-            deskPortalSDK.startLiveChat();
+            deskPortalSDK.startLiveChat(activity);
         }
     }
 
