@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-zohodesk-portal" version="0.3.0">
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-zohodesk-portal" version="0.3.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>CordovaZohoDeskPortal</name>
     <js-module name="CordovaZohoDeskPortal" src="www/CordovaZohoDeskPortal.js">
         <clobbers target="cordova.plugins.CordovaZohoDeskPortal" />
     </js-module>
     <platform name="android">
-
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="CordovaZohoDeskPortal">
                 <param name="android-package" value="com.zoho.desk.portal.CordovaZohoDeskPortal" />
@@ -14,5 +13,37 @@
         <config-file parent="/*" target="AndroidManifest.xml" />
         <source-file src="src/android/com/zoho/desk/portal/CordovaZohoDeskPortal.java" target-dir="src/com/zoho/desk/portal" />
         <framework custom="true" src="src/android/cordovaZohoPortalSDK.gradle" type="gradleReference" />
+    </platform>
+    <platform name="ios">
+<!--        Added ZohoDeskPortalSDK as podspec-->
+        <podspec>
+            <config>
+                <source url="https://github.com/zoho/ZohoDeskPortalSDK.git" />
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="ZohoDeskPortalSDK" git="https://github.com/zoho/ZohoDeskPortalSDK.git" branch="Cordova"/>
+            </pods>
+        </podspec>
+<!--        -->
+
+<!--Camera & Photo permission added-->
+        <preference name="CAMERA_USAGE_DESCRIPTION" default="This app needs camera access"/>
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>$CAMERA_USAGE_DESCRIPTION</string>
+        </config-file>
+        
+        <preference name="PHOTOLIBRARY_USAGE_DESCRIPTION" default="This app needs read/write-access photo library access"/>
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
+        </config-file>
+<!--        -->
+
+        <config-file parent="/*" target="config.xml">
+            <feature name="CordovaZohoDeskPortal">
+                <param name="ios-package" value="CordovaZohoDeskPortal" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/CordovaZohoDeskPortal.m" />
     </platform>
 </plugin>
